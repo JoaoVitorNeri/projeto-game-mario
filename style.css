@@ -11,6 +11,7 @@
     height: 500px;
     border: 1px solid black;
     margin: 0 auto;
+    background: linear-gradient(rgb(5, 238, 255), rgb(255, 255, 255));
 }
 
 .tubo{
@@ -20,11 +21,25 @@
     animation: tubo-animacao 2s infinite linear;
 }
 
+.nuvens{
+    position: absolute;
+    width: 320px;
+    animation: nuvens-animacao 4s infinite linear;
+}
+
+@keyframes nuvens-animacao{
+    from{
+        right: 0;
+    }
+    to{
+        right: 100%;
+    }
+}
+
 @keyframes tubo-animacao{
     from {
         right: 0;
     }
-
     to {
         right: 100%;
     }
