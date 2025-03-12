@@ -1,0 +1,32 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.quadro-jogo{
+    position: relative;
+    overflow: hidden;
+    width: 80%;
+    height: 500px;
+    border: 1px solid black;
+    margin: 0 auto;
+}
+
+.tubo{
+    position: absolute;
+    width: 70px;
+    bottom: 0;
+    animation: tubo-animacao 2s infinite linear;
+}
+
+@keyframes tubo-animacao{
+    from {
+        right: 0;
+    }
+
+    to {
+        right: 100%;
+    }
+}
+
