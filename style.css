@@ -2,22 +2,31 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    background-image: url(assets/imagens/wp12338224.webp);
 }
 
 .quadro-jogo{
     position: relative;
     overflow: hidden;
-    width: 80%;
-    height: 500px;
-    border: 1px solid black;
+    width: 100%;
+    height: 614px;
+    border-bottom: 15px solid rgb(3, 133, 14);
     margin: 0 auto;
     background: linear-gradient(rgb(5, 238, 255), rgb(255, 255, 255));
 }
 
+.mario{
+    position: absolute;
+    width: 100px;
+    left: 60px;
+    bottom: 0px;
+}
+.pulo{
+    animation: pulo 600ms ease-out;
+}
+
 .tubo{
     position: absolute;
-    width: 70px;
+    width: 60px;
     bottom: 0;
     animation: tubo-animacao 2s infinite linear;
 }
@@ -25,24 +34,64 @@
 .nuvens{
     position: absolute;
     width: 320px;
-    animation: nuvens-animacao 4s infinite linear;
+    animation: nuvens-animacao 10s infinite linear;
+    margin-top: 30px;
+}
+
+@keyframes pulo{
+    0%{
+        bottom: 0px;
+    }
+    40%{
+        bottom: 130px;
+    }
+    50%{
+        bottom: 130px;
+    }
+    60%{
+        bottom: 130px;
+    }
+    100%{
+        bottom: 0px;
+    }
+}
+
+@keyframes tubo-animacao{
+    from {
+        right: -60px;
+    }
+    to {
+        right: 100%;
+    }
 }
 
 @keyframes nuvens-animacao{
     from{
-        right: 0;
+        right: -320px;
     }
     to{
         right: 100%;
     }
 }
 
-@keyframes tubo-animacao{
-    from {
-        right: 0;
+@media screen and (max-width: 768px){
+    .quadro-jogo{
+        height: 740px;
     }
-    to {
-        right: 100%;
+    .mario{
+        width: 50px;
     }
+    .tubo{
+        width: 30px;
+    }
+    .nuvens{
+        width: 160px;
+    }
+    
 }
+
+
+
+
+
 
